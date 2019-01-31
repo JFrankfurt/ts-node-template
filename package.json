@@ -1,0 +1,26 @@
+{
+  "name": "node-ts",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^6.2.0"
+  },
+  "devDependencies": {
+    "@types/dotenv": "^6.1.0",
+    "@types/node": "^10.12.18",
+    "nodemon": "^1.18.9",
+    "prettier": "^1.16.1",
+    "ts-node": "^8.0.1",
+    "tslint": "^5.12.1",
+    "typescript": "^3.2.4"
+  },
+  "scripts": {
+    "build": "yarn build-ts && yarn tslint",
+    "build-ts": "tsc",
+    "dev": "nodemon src/index.ts",
+    "prettier:write": "prettier --write \"src/**/*.ts\"",
+    "start": "node dist/server.js",
+    "tslint": "tslint -c tslint.json -p tsconfig.json"
+  }
+}
